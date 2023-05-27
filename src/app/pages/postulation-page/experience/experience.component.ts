@@ -1,15 +1,10 @@
-import { NgIf } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
 	selector: 'app-experience',
 	templateUrl: './experience.component.html',
-	styleUrls: ['./experience.component.scss'],
-	standalone: true,
-	imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, NgIf]
+	styleUrls: ['./experience.component.scss']
 })
 export class ExperienceComponent {
 	private _formBuilder = inject(FormBuilder);
