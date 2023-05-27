@@ -4,6 +4,19 @@ Sin duda, los 𝗦𝘁𝗮𝗻𝗱𝗮𝗹𝗼𝗻𝗲 𝗖𝗼𝗺𝗽𝗼𝗻�
 
 Más información: https://www.youtube.com/watch?v=sQwzR3gvETc
 
+
+Rama full-standalone (es al ejecutar el comando de angular que lo hace automáticamente) :
+- Modificó el componente container como un standalone; añadiendo como dependencias: RouterLink, RouterOutlet.
+- Modificó el componente home-page como un standalone; añadiendo como dependencias: NgFor, MatRippleModule, WorkCardComponent
+- Modificó el componente basic-information como un standalone; añadiendo como dependencias: ReactiveFormsModule, MatButtonModule, MatIconModule, MatFormFieldModule, MatInputModule, NgIf
+- Modificó el componente experience como un standalone; añadiendo como dependencias: ReactiveFormsModule, MatFormFieldModule, MatInputModule, NgIf
+- Modificó el componente work-detail-page como un standalone; añadiendo como dependencias: NgIf, MatButtonModule, RouterLink, WorkCardComponent, NgFor
+  - Y modificó el módulo de work-detail-page quitando declarations: WorkDetailPageComponent, y poniendo el WorkDetailPageComponent en los import; donde además quita el WorkCardModule (ya que ahora no se trabaja con módulos)
+- Modificó el componente app como un standalone; añadiendo como dependencias: ContainerComponent (que es lo único que renderiza)
+- Modificó solamente el atributo de standalone a true, en los componentes word-card, postulation
+  - Y modificó el módulo de postulation quitando todas las declarations, moviendolas para los import; donde además quita el WorkCardModule (ya que ahora no se trabaja con módulos) AHORA ESOS COMPONENTES QUE SE PONIAN EN LAS DECLARATIONS DE LOS MÓDULOS, SE AÑADEN DIRECTAMENTE EN EL "imports" DEL COMPONENTE COMO REQUISITOS
+
+
 **Suscríbete a mi canal** 😎
 
 https://www.youtube.com/c/LogiDev

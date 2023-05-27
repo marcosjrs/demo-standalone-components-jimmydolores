@@ -1,11 +1,17 @@
+import { NgIf } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 
 @Component({
 	selector: 'app-basic-information',
-
 	templateUrl: './basic-information.component.html',
-	styleUrls: ['./basic-information.component.scss']
+	styleUrls: ['./basic-information.component.scss'],
+	standalone: true,
+	imports: [ReactiveFormsModule, MatButtonModule, MatIconModule, MatFormFieldModule, MatInputModule, NgIf]
 })
 export class BasicInformationComponent {
 	private _formBuilder = inject(FormBuilder);

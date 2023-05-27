@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 			<h3>Se ha enviado tu postulación, estás a un paso de conseguir tu trabajo ideal.😎</h3>
 		</div>
 	`,
-	styleUrls: ['./postulation-confirmation.component.scss']
+	styleUrls: ['./postulation-confirmation.component.scss'],
+	standalone: true
 })
 export class PostulationConfirmationComponent {}
